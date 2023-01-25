@@ -112,7 +112,7 @@ function checkCurrentHour(hour) {
     hourFour[0].style.backgroundColor = "#d3d3d3"
 
     if (hour == 16) {
-      hourFour[0].style.backgroundColor = "red;"
+      hourFour[0].style.backgroundColor = "ff6961;"
     }
     if (hour < 16) {
       (hourFour[0].style.backgroundColor = "#77dd77")
@@ -133,8 +133,9 @@ function checkCurrentHour(hour) {
 
 }
 
+// First we are creating a variable to store the textarea class which we renamed to chocolate. 
 function storeData() {
-
+  $(".chocolate").val();
 }
 
 
