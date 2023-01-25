@@ -15,10 +15,14 @@ $(function () {
     console.log($(this).siblings(".chocolate").val())
     var textArea = $(this).siblings(".chocolate").val()
     var ID = $(this).parent().attr("id")
+    localStorage.setItem(ID, textArea);
   })
-  // var descriptionSaved = $('.chocolate')
+  $('.time-block').each(function () {
+    console.log($(this))
+    var saveID = $(this).attr("id")
+    $(this).children(".chocolate").val(localStorage.getItem(saveID))
+  })
   checkCurrentHour(hour)
-  storeData()
 });
 
 
