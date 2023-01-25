@@ -11,7 +11,11 @@ $(function () {
 
   var currentTime = $('#currentTime').text(hour + ":00 PM")
   var currentDay = $('#currentDay').text(now)
-  // var saveButtons = $('.btn saveBtn col-2 col-md-1')
+  $('.saveBtn').on('click', function () {
+    console.log($(this).siblings(".chocolate").val())
+    var textArea = $(this).siblings(".chocolate").val()
+    var ID = $(this).parent().attr("id")
+  })
   // var descriptionSaved = $('.chocolate')
   checkCurrentHour(hour)
   storeData()
@@ -24,7 +28,7 @@ function checkCurrentHour(hour) {
     hourNine[0].style.backgroundColor = "#d3d3d3"
 
     if (hour == 9) {
-      hourNine[0].style.backgroundColor = "#ff6961;"
+      hourNine[0].style.backgroundColor = "#ff6961"
     }
 
     if (hour < 9) {
@@ -37,7 +41,7 @@ function checkCurrentHour(hour) {
     hourTen[0].style.backgroundColor = "#d3d3d3"
 
     if (hour == 10) {
-      hourTen[0].style.backgroundColor = "#ff6961;"
+      hourTen[0].style.backgroundColor = "#ff6961"
     }
 
     if (hour < 10) {
@@ -49,7 +53,7 @@ function checkCurrentHour(hour) {
     hourEleven[0].style.backgroundColor = "#d3d3d3"
 
     if (hour == 11) {
-      hourEleven[0].style.backgroundColor = "#ff6961;"
+      hourEleven[0].style.backgroundColor = "#ff6961"
     }
 
     if (hour < 11) {
@@ -62,19 +66,19 @@ function checkCurrentHour(hour) {
     hourTwelve[0].style.backgroundColor = "#d3d3d3"
 
     if (hour == 12) {
-      hourTwelve[0].style.backgroundColor = "#ff6961;"
+      hourTwelve[0].style.backgroundColor = "#ff6961"
     }
 
     if (hour < 12) {
       (hourTwelve[0].style.backgroundColor = "#77dd77")
     }
   }
-  if (hour > 13) {
+  if (hour >= 13) {
     let hourOne = $('#hour-1')
     hourOne[0].style.backgroundColor = "#d3d3d3"
 
     if (hour == 13) {
-      hourOne[0].style.backgroundColor = "#ff6961;"
+      hourOne[0].style.backgroundColor = "#ff6961"
     }
 
     if (hour < 13) {
@@ -87,7 +91,7 @@ function checkCurrentHour(hour) {
     hourTwo[0].style.backgroundColor = "#d3d3d3"
 
     if (hour == 14) {
-      hourTwo[0].style.backgroundColor = "#ff6961;"
+      hourTwo[0].style.backgroundColor = "#ff6961"
     }
     if (hour < 14) {
       (hourTwo[0].style.backgroundColor = "#77dd77")
@@ -99,7 +103,7 @@ function checkCurrentHour(hour) {
     hourThree[0].style.backgroundColor = "#d3d3d3"
 
     if (hour == 15) {
-      hourThree[0].style.backgroundColor = "#ff6961;"
+      hourThree[0].style.backgroundColor = "#ff6961"
     }
 
     if (hour < 15) {
@@ -112,7 +116,7 @@ function checkCurrentHour(hour) {
     hourFour[0].style.backgroundColor = "#d3d3d3"
 
     if (hour == 16) {
-      hourFour[0].style.backgroundColor = "ff6961;"
+      hourFour[0].style.backgroundColor = "ff6961"
     }
     if (hour < 16) {
       (hourFour[0].style.backgroundColor = "#77dd77")
@@ -123,7 +127,7 @@ function checkCurrentHour(hour) {
     hourFive[0].style.backgroundColor = "#d3d3d3"
 
     if (hour == 17) {
-      hourFive[0].style.backgroundColor = "#ff6961;"
+      hourFive[0].style.backgroundColor = "#ff6961"
     }
 
     if (hour < 17) {
@@ -134,9 +138,7 @@ function checkCurrentHour(hour) {
 }
 
 // First we are creating a variable to store the textarea class which we renamed to chocolate. 
-function storeData() {
-  $(".chocolate").val();
-}
+
 
 
 // first grab text from textarea, then delete textarea, then create new div, then place textareatext in new div's innerhtml. 
