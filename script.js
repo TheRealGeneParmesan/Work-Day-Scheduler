@@ -1,22 +1,21 @@
-// First I have to make sure that I am calling the jquery library
-// Then I am creating my global variables. I need to make sure that the buttons have functionality.  
-// day.js has to update to the current time and day when you open it. figure out how to do that.
-// add code that displays the current date and the current time.  
-
-
-// Should remove class color in HTML possibly and add it based on time here in JS.
+// Calls dayjs library to get the day and the hour, which we then display at the top of our HTML page. 
 $(function () {
   var now = dayjs()
   var hour = now.hour()
 
   var currentTime = $('#currentTime').text(hour + ":00 PM")
   var currentDay = $('#currentDay').text(now)
+
+  // Started by creating an event for when we click the save button then targetted the textarea class and the parent ID in order to set the objects to storage. 
   $('.saveBtn').on('click', function () {
     console.log($(this).siblings(".chocolate").val())
     var textArea = $(this).siblings(".chocolate").val()
     var ID = $(this).parent().attr("id")
     localStorage.setItem(ID, textArea);
   })
+
+  // We save in storage here using the for each jquery to go through each div ID to make sure that whatever we type in the text area, which is class "chocolate" is saved using .val. We then run the checkCurrentHour function.
+
   $('.time-block').each(function () {
     console.log($(this))
     var saveID = $(this).attr("id")
@@ -25,9 +24,10 @@ $(function () {
   checkCurrentHour(hour)
 });
 
+// In this function we are using the hour variable that we set above, which uses day.js to check the time and use an if statement to check if each hour is greater than or equal to the current hour and if so, to set the text area to grey, if they are equal to set it to red and if it's less than the hour to set it to green since that will be future events. 
 
 function checkCurrentHour(hour) {
-  if (hour > 9) {
+  if (hour >= 9) {
     let hourNine = $('#hour-9')
     hourNine[0].style.backgroundColor = "#d3d3d3"
 
@@ -40,7 +40,7 @@ function checkCurrentHour(hour) {
     }
   }
 
-  if (hour > 10) {
+  if (hour >= 10) {
     let hourTen = $('#hour-10')
     hourTen[0].style.backgroundColor = "#d3d3d3"
 
@@ -52,7 +52,7 @@ function checkCurrentHour(hour) {
       (hourTen[0].style.backgroundColor = "#77dd77")
     }
   }
-  if (hour > 11) {
+  if (hour >= 11) {
     let hourEleven = $('#hour-11')
     hourEleven[0].style.backgroundColor = "#d3d3d3"
 
@@ -65,7 +65,7 @@ function checkCurrentHour(hour) {
     }
   }
 
-  if (hour > 12) {
+  if (hour >= 12) {
     let hourTwelve = $('#hour-12')
     hourTwelve[0].style.backgroundColor = "#d3d3d3"
 
@@ -90,7 +90,7 @@ function checkCurrentHour(hour) {
     }
   }
 
-  if (hour > 14) {
+  if (hour >= 14) {
     let hourTwo = $('#hour-2')
     hourTwo[0].style.backgroundColor = "#d3d3d3"
 
@@ -102,7 +102,7 @@ function checkCurrentHour(hour) {
     }
   }
 
-  if (hour > 15) {
+  if (hour >= 15) {
     let hourThree = $('#hour-3')
     hourThree[0].style.backgroundColor = "#d3d3d3"
 
@@ -115,7 +115,7 @@ function checkCurrentHour(hour) {
     }
   }
 
-  if (hour > 16) {
+  if (hour >= 16) {
     let hourFour = $('#hour-4')
     hourFour[0].style.backgroundColor = "#d3d3d3"
 
@@ -126,7 +126,7 @@ function checkCurrentHour(hour) {
       (hourFour[0].style.backgroundColor = "#77dd77")
     }
   }
-  if (hour > 17) {
+  if (hour >= 17) {
     let hourFive = $('#hour-5')
     hourFive[0].style.backgroundColor = "#d3d3d3"
 
@@ -140,51 +140,3 @@ function checkCurrentHour(hour) {
   }
 
 }
-
-// First we are creating a variable to store the textarea class which we renamed to chocolate. 
-
-
-
-// first grab text from textarea, then delete textarea, then create new div, then place textareatext in new div's innerhtml. 
-
-// futureEvent()
-
-// creatingEvent()
-
-// // store(); {
-// //  descriptionSaved.innerhtml
-
-
-// saveEventonRefresh(); {
-//   saveButtons.addEventListener('click', store())
-// }
-// Need to be able to click the buttons and give the buttons functionality. Can use query selector to match the buttons. When I click the button next to the event. It saves. 
-// we can use an event listener here that stores when clicks. 
-
-
-
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
-
-
-
