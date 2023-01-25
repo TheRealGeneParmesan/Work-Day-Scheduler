@@ -8,6 +8,7 @@
 $(function () {
   var now = dayjs()
   var hour = now.hour()
+  var chocolate = 0
 
   var currentTime = $('#currentTime').text(hour + ":00 PM")
   var currentDay = $('#currentDay').text(now)
@@ -100,6 +101,7 @@ function checkCurrentHour(hour) {
   }
 
 }
+
 
 
 // futureEvent()
