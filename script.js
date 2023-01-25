@@ -8,7 +8,6 @@
 $(function () {
   var now = dayjs()
   var hour = now.hour()
-  var chocolate = 0
 
   var currentTime = $('#currentTime').text(hour + ":00 PM")
   var currentDay = $('#currentDay').text(now)
@@ -22,82 +21,113 @@ function checkCurrentHour(hour) {
   if (hour > 9) {
     let hourNine = $('#hour-9')
     hourNine[0].style.backgroundColor = "#d3d3d3"
+
     if (hour == 9) {
       hourNine[0].style.backgroundColor = "#ff6961;"
     }
-    else (hourNine[0].style.backgroundColor = "#d3d3d3")
+
+    if (hour < 9) {
+      (hourNine[0].style.backgroundColor = "#77dd77")
+    }
   }
 
   if (hour > 10) {
     let hourTen = $('#hour-10')
     hourTen[0].style.backgroundColor = "#d3d3d3"
+
     if (hour == 10) {
       hourTen[0].style.backgroundColor = "#ff6961;"
     }
-    else (hourTen[0].style.backgroundColor = "#d3d3d3")
-  }
 
+    if (hour < 10) {
+      (hourTen[0].style.backgroundColor = "#77dd77")
+    }
+  }
   if (hour > 11) {
     let hourEleven = $('#hour-11')
     hourEleven[0].style.backgroundColor = "#d3d3d3"
+
     if (hour == 11) {
       hourEleven[0].style.backgroundColor = "#ff6961;"
     }
-    else (hourEleven[0].style.backgroundColor = "#d3d3d3")
+
+    if (hour < 11) {
+      (hourEleven[0].style.backgroundColor = "#77dd77")
+    }
   }
 
   if (hour > 12) {
     let hourTwelve = $('#hour-12')
     hourTwelve[0].style.backgroundColor = "#d3d3d3"
+
     if (hour == 12) {
       hourTwelve[0].style.backgroundColor = "#ff6961;"
     }
-    else (hourTwelve[0].style.backgroundColor = "#d3d3d3")
-  }
 
+    if (hour < 12) {
+      (hourTwelve[0].style.backgroundColor = "#77dd77")
+    }
+  }
   if (hour > 13) {
     let hourOne = $('#hour-1')
     hourOne[0].style.backgroundColor = "#d3d3d3"
+
     if (hour == 13) {
       hourOne[0].style.backgroundColor = "#ff6961;"
     }
-    else (hourOne[0].style.backgroundColor = "#d3d3d3")
+
+    if (hour < 13) {
+      (hourOne[0].style.backgroundColor = "#77dd77")
+    }
   }
 
   if (hour > 14) {
     let hourTwo = $('#hour-2')
     hourTwo[0].style.backgroundColor = "#d3d3d3"
+
     if (hour == 14) {
       hourTwo[0].style.backgroundColor = "#ff6961;"
     }
-    else (hourTwo[0].style.backgroundColor = "#d3d3d3")
+    if (hour < 14) {
+      (hourTwo[0].style.backgroundColor = "#77dd77")
+    }
   }
 
   if (hour > 15) {
     let hourThree = $('#hour-3')
     hourThree[0].style.backgroundColor = "#d3d3d3"
+
     if (hour == 15) {
       hourThree[0].style.backgroundColor = "#ff6961;"
     }
-    else (hourThree[0].style.backgroundColor = "#d3d3d3")
+
+    if (hour < 15) {
+      (hourThree[0].style.backgroundColor = "#77dd77")
+    }
   }
 
   if (hour > 16) {
     let hourFour = $('#hour-4')
     hourFour[0].style.backgroundColor = "#d3d3d3"
+
     if (hour == 16) {
       hourFour[0].style.backgroundColor = "red;"
     }
-    else (hourFour[0].style.backgroundColor = "#d3d3d3")
+    if (hour < 16) {
+      (hourFour[0].style.backgroundColor = "#77dd77")
+    }
   }
-
   if (hour > 17) {
     let hourFive = $('#hour-5')
     hourFive[0].style.backgroundColor = "#d3d3d3"
+
     if (hour == 17) {
       hourFive[0].style.backgroundColor = "#ff6961;"
     }
-    else (hourFive[0].style.backgroundColor = "#d3d3d3")
+
+    if (hour < 17) {
+      (hourFive[0].style.backgroundColor = "#77dd77")
+    }
   }
 
 }
