@@ -14,6 +14,7 @@ $(function () {
   // var saveButtons = $('.btn saveBtn col-2 col-md-1')
   // var descriptionSaved = $('.chocolate')
   checkCurrentHour(hour)
+  storeData()
 });
 
 
@@ -132,7 +133,12 @@ function checkCurrentHour(hour) {
 
 }
 
+function storeData() {
 
+}
+
+
+// first grab text from textarea, then delete textarea, then create new div, then place textareatext in new div's innerhtml. 
 
 // futureEvent()
 
@@ -175,4 +181,3 @@ function checkCurrentHour(hour) {
 
 
 
-  // first grab text from textarea, then delete textarea, then create new div, then place textareatext in new div's innerhtml. 
