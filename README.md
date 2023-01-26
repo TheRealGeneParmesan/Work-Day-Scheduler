@@ -7,6 +7,6 @@ For future blocks of time, each block will be color coded green.
 If I want to save something in my planner for an hourly block, I am able to input it in the text area and then click the lock button on the right to store/save that information.
 If time has passed, I can delete any lines in the text area and then click the lock button again to save the removal. 
 
-![image](https://user-images.githubusercontent.com/119083185/214732892-e3c2c961-fc75-4956-b211-b2b29e895438.png)
+![image](https://user-images.githubusercontent.com/119083185/214733133-dbfc54ae-f4d4-405f-ae3e-ad31a14511be.png)
 
 https://therealgeneparmesan.github.io/Challenge-5/
