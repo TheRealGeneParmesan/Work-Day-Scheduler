@@ -17,7 +17,6 @@ $(function () {
   // We save in storage here using the for each jquery to go through each div ID to make sure that whatever we type in the text area, which is class "chocolate" is saved using .val. We then run the checkCurrentHour function.
 
   $('.time-block').each(function () {
-    console.log($(this))
     var saveID = $(this).attr("id")
     $(this).children(".chocolate").val(localStorage.getItem(saveID))
   })
