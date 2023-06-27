@@ -1,11 +1,12 @@
 Jquery Event Planner
-In this javascript/Jquery project I am creating a daily planner that will update me in realtime on the exact day and time. 
 
-My planner will also provide a color coated schedule for each hour of the day. 
+In this JS/Jquery project I am creating a daily planner that will provide me with an updated planner based on the day and time. 
+
+My planner provides a color coated schedule for each hour of the day. 
 
 When an event/hour has passed, that hourly block of the planner will be greyed out. 
 
-When it is the current time of the event/hour, that hourly block will be red indicating that the hour is in progress.
+When it's the current time of the event/hour, that hourly block will be red indicating that the hour is in progress.
 
 For future blocks of time, each block will be color coded green.
 
